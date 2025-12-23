@@ -58,7 +58,7 @@ CreatedAt   time.Time
 UpdatedAt   time.Time
 }
 
-// TableName overrides the table name
+// TableName overrides the table name for GORM
 func (DataQualityIssue) TableName() string {
 return "mod26_quality_issues"
 }
