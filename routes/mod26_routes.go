@@ -2,7 +2,7 @@
 
 import (
     "github.com/gofiber/fiber/v2"
-    "github.com/indojobmarket/job-analytics-fiber-api/controllers/mod26_data_quality"
+    "github.com/herlambangharyoputro/job-analytics-fiber-api/controllers/mod26_data_quality"
 )
 
 func SetupMod26Routes(api fiber.Router) {

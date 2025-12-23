@@ -2,8 +2,8 @@
 
 import (
     "log"
-    "github.com/indojobmarket/job-analytics-fiber-api/config"
-    "github.com/indojobmarket/job-analytics-fiber-api/models/mod26_data_quality"
+    "github.com/herlambangharyoputro/job-analytics-fiber-api/config"
+    "github.com/herlambangharyoputro/job-analytics-fiber-api/models/mod26_data_quality"
 )
 
 func RunMigrations() {

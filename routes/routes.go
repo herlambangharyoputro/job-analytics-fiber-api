@@ -2,7 +2,7 @@
 
 import (
     "github.com/gofiber/fiber/v2"
-    "github.com/indojobmarket/job-analytics-fiber-api/config"
+    "github.com/herlambangharyoputro/job-analytics-fiber-api/config"
 )
 
 func SetupRoutes(app *fiber.App) {

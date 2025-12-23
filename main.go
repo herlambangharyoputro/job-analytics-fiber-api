@@ -9,9 +9,9 @@ import (
     "github.com/gofiber/fiber/v2/middleware/logger"
     "github.com/gofiber/fiber/v2/middleware/recover"
 
-    "github.com/indojobmarket/job-analytics-fiber-api/config"
-    "github.com/indojobmarket/job-analytics-fiber-api/database"
-    "github.com/indojobmarket/job-analytics-fiber-api/routes"
+    "github.com/herlambangharyoputro/job-analytics-fiber-api/config"
+    "github.com/herlambangharyoputro/job-analytics-fiber-api/database"
+    "github.com/herlambangharyoputro/job-analytics-fiber-api/routes"
 )
 
 func main() {

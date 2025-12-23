@@ -2,7 +2,7 @@
 
 import (
     "github.com/gofiber/fiber/v2"
-    "github.com/indojobmarket/job-analytics-fiber-api/utils"
+    "github.com/herlambangharyoputro/job-analytics-fiber-api/utils"
 )
 
 // GetQualityMetrics retrieves quality metrics
