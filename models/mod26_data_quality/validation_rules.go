@@ -6,7 +6,7 @@ import "time"
 type DataValidationRule struct {
 ID          uint      `gorm:"primaryKey"`
 RuleName    string    `gorm:"size:100;not null;uniqueIndex"`
-TableName   string    `gorm:"size:100;not null;index"`
+TargetTable string    `gorm:"column:table_name;size:100;not null;index"` // Renamed from TableName to avoid conflict
 FieldName   string    `gorm:"size:100;not null"`
 RuleType    string    `gorm:"size:50;not null"` // required, format, range, custom
 RuleValue   string    `gorm:"type:text"` // JSON or string representing rule

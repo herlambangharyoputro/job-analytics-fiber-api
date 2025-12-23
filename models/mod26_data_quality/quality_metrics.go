@@ -47,7 +47,7 @@ type DataQualityIssue struct {
 ID          uint       `gorm:"primaryKey"`
 IssueType   string     `gorm:"size:50;not null;index"` // missing, invalid, duplicate, outlier
 Severity    string     `gorm:"size:20;not null;index"` // low, medium, high, critical
-TableName   string     `gorm:"size:100;not null"`
+TargetTable string     `gorm:"column:table_name;size:100;not null"` // Renamed from TableName to avoid conflict
 FieldName   string     `gorm:"size:100"`
 RecordID    string     `gorm:"size:100"`
 Description string     `gorm:"type:text"`
