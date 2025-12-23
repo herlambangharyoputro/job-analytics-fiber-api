@@ -51,8 +51,8 @@ return utils.SuccessResponse(c, "Quality summary generated successfully", summar
 
 // GetQualityIssues retrieves all quality issues with filters
 func GetQualityIssues(c *fiber.Ctx) error {
-status := c.Query("status", "")      // open, resolved, ignored
-severity := c.Query("severity", "")  // low, medium, high, critical
+status := c.Query("status", "")
+severity := c.Query("severity", "")
 limit := c.QueryInt("limit", 50)
 
 if limit > 200 {
@@ -122,7 +122,6 @@ if getErr != nil {
 return utils.ErrorResponse(c, fiber.StatusInternalServerError, "Failed to retrieve field checks", getErr)
 }
 
-// Convert to interface slice
 for _, check := range result {
 checks = append(checks, check)
 }
@@ -133,7 +132,6 @@ if getErr != nil {
 return utils.ErrorResponse(c, fiber.StatusInternalServerError, "Failed to retrieve field checks", getErr)
 }
 
-// Convert to interface slice
 for _, check := range result {
 checks = append(checks, check)
 }
@@ -168,7 +166,7 @@ return utils.SuccessResponse(c, "Validation rules retrieved successfully", fiber
 
 // CreateValidationRule creates a new validation rule
 func CreateValidationRule(c *fiber.Ctx) error {
-var rule models.DataValidationRule
+var rule mod26_data_quality.DataValidationRule
 
 if err := c.BodyParser(&rule); err != nil {
 return utils.ErrorResponse(c, fiber.StatusBadRequest, "Invalid request body", err)
