@@ -1,25 +1,35 @@
-﻿package database
+package database
 
 import (
-    "log"
-    "github.com/herlambangharyoputro/job-analytics-fiber-api/config"
-    "github.com/herlambangharyoputro/job-analytics-fiber-api/models/mod26_data_quality"
+"log"
+"github.com/herlambangharyoputro/job-analytics-fiber-api/config"
+"github.com/herlambangharyoputro/job-analytics-fiber-api/models/mod26_data_quality"
+"github.com/herlambangharyoputro/job-analytics-fiber-api/database/seeders"
 )
 
 func RunMigrations() {
-    log.Println("Running database migrations...")
+log.Println("Running database migrations...")
 
-    // Auto-migrate Module 26 tables
-    err := config.DB.AutoMigrate(
-        &mod26_data_quality.DataQualityMetric{},
-        &mod26_data_quality.FieldQualityCheck{},
-        &mod26_data_quality.DataQualityIssue{},
-        &mod26_data_quality.DataValidationRule{},
-    )
+// Auto-migrate Module 26 tables
+err := config.DB.AutoMigrate(
+&mod26_data_quality.DataQualityMetric{},
+&mod26_data_quality.FieldQualityCheck{},
+&mod26_data_quality.DataQualityIssue{},
+&mod26_data_quality.DataValidationRule{},
+)
 
-    if err != nil {
-        log.Fatal("Migration failed:", err)
-    }
+if err != nil {
+log.Fatal("Migration failed:", err)
+}
 
-    log.Println("Migrations completed successfully")
+log.Println("Migrations completed successfully")
+}
+
+func RunSeeders() {
+log.Println("Running database seeders...")
+
+// Seed Module 26 data
+seeders.SeedMod26DataQuality()
+
+log.Println("Seeders completed successfully")
 }
