@@ -4,12 +4,12 @@ import (
 "strconv"
 
 "github.com/gofiber/fiber/v2"
-"github.com/herlambangharyoputro/job-analytics-fiber-api/models/mod26_data_quality"
-"github.com/herlambangharyoputro/job-analytics-fiber-api/services/mod26_data_quality"
+models "github.com/herlambangharyoputro/job-analytics-fiber-api/models/mod26_data_quality"
+services "github.com/herlambangharyoputro/job-analytics-fiber-api/services/mod26_data_quality"
 "github.com/herlambangharyoputro/job-analytics-fiber-api/utils"
 )
 
-var qualityService = mod26_data_quality.NewQualityService()
+var qualityService = services.NewQualityService()
 
 // GetQualityMetrics retrieves quality metrics with pagination
 func GetQualityMetrics(c *fiber.Ctx) error {
@@ -166,7 +166,7 @@ return utils.SuccessResponse(c, "Validation rules retrieved successfully", fiber
 
 // CreateValidationRule creates a new validation rule
 func CreateValidationRule(c *fiber.Ctx) error {
-var rule mod26_data_quality.DataValidationRule
+var rule models.DataValidationRule
 
 if err := c.BodyParser(&rule); err != nil {
 return utils.ErrorResponse(c, fiber.StatusBadRequest, "Invalid request body", err)
