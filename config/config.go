@@ -37,7 +37,7 @@ func LoadConfig() {
     AppConfig = &Config{
         AppName:    getEnv("APP_NAME", "IndoJobMarket Fiber API"),
         AppEnv:     getEnv("APP_ENV", "development"),
-        AppPort:    getEnv("APP_PORT", "3000"),
+        AppPort:    getEnv("APP_PORT", "8003"),
         DBHost:     getEnv("DB_HOST", "localhost"),
         DBPort:     getEnv("DB_PORT", "3306"),
         DBUser:     getEnv("DB_USER", "root"),

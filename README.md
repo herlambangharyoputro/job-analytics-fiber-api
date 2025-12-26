@@ -38,7 +38,7 @@ CREATE DATABASE indojobmarket_dev CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_
 go run main.go
 \\\
 
-Server will start on http://localhost:3000
+Server will start on http://localhost:8003
 
 ## API Endpoints
 
