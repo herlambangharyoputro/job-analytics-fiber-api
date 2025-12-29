@@ -1,0 +1,6 @@
+﻿.git
+.env
+*.md
+tmp/
+*.log
+.air.toml
