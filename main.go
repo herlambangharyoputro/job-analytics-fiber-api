@@ -38,7 +38,7 @@ return c.Status(code).JSON(fiber.Map{
 app.Use(recover.New())
 app.Use(logger.New())
 app.Use(cors.New(cors.Config{
-AllowOrigins: "http://localhost:5173, http://localhost:3129",
+AllowOrigins: "*",
 AllowHeaders: "Origin, Content-Type, Accept, Authorization",
 AllowMethods: "GET, POST, PUT, DELETE, PATCH, OPTIONS",
 }))
