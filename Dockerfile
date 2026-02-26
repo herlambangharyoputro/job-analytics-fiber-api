@@ -23,3 +23,4 @@ COPY --from=builder /app/main .
 EXPOSE 8003
 
 CMD ["./main"]
+
